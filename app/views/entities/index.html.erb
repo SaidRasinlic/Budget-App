@@ -1,0 +1,29 @@
+<%= render 'shared/nav_return' %>
+<section class="container-fluid d-flex flex-column px-0" id="entities-frame">
+  <div class="delete-group">
+    <%= button_to group_path(@group),class: "delete-group-btn", method: :delete do %>Delete Group<% end %>
+    <p class="del-date"><% if @group.entities.present? %><span class="spn">Group created at:<br/>
+        </span><%=  @group.entities.last.created_at.strftime("%d-%B-%Y") %><%else%> <%="No entities created, please create it."%> <%end%></p>
+  </div>
+  <ul class="entities-list">
+    <% @entities.each do |entity| %>
+      <li class="entities-item">
+        <div class="entities-name">
+          <ion-icon name="<%= @group.icon %>" class="transaction-img <%= @group.icon %>"></ion-icon>
+          <p class="entities-p"><%= entity.name %></p>
+        </div>
+        <div class="entities-amount">
+          <p class="entities-p precision">$<%= number_with_precision(entity.amount, precision: 2) %></p>
+        </div>
+        <%= button_to group_entity_path(@group, entity), class:"delete-entity-item", method: :delete do %>Delete<% end %>
+      </li>
+    <% end %>
+  </ul>
+  <div class="options">
+    <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-danger"%>
+    <%= link_to new_group_entity_path do %>
+      <ion-icon name="add-outline" class="add-button"></ion-icon>
+    <% end %>
+    <ion-icon name="alert-circle" class="show-button" data-toggle="modal" data-target="#exampleModal"></ion-icon>
+  </div>
+</section>

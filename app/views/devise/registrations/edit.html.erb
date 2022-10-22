@@ -1,0 +1,26 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %> <%= render "devise/shared/error_messages", resource: resource %>
+
+<section class="user-expenses">
+  <div class="user__amount">
+    <div class="user__title">Edit User</div>
+    <%= image_tag avatar_url(@user), :class => "avatar"%>
+    <div class="user__option category-title">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <%= f.text_field :name, :placeholder => "Name", :class => "option-text" %>
+    </div>
+
+    <div class="user__option category-title">
+      <ion-icon name="image-outline"></ion-icon>
+      <%= f.file_field :avatar, :class => "option-text custom-file-input", accept: "image/jpeg, image/png, image/jpg" %>
+    </div>
+    <div class="user__option category-title">
+      <ion-icon name="mail-outline"></ion-icon>
+      <%= f.email_field :email, :placeholder => "Email", :class => "option-text" %>
+    </div>
+  </div>
+  <div class="user__button"><%= f.submit "Update", :class => 'user__save' %></div>
+  <br />
+  <% end %> <%= link_to groups_path, class: 'back__button' do %>
+  <ion-icon name="arrow-back" class="settings-button"></ion-icon>
+  <% end %>
+</section>

@@ -1,0 +1,18 @@
+<%= render 'shared/entity_return' %>
+<%= form_for(@entity, url: group_entities_path, html: { method: :post }) do |f| %>
+  <section class="add-expenses">
+    <div class="add-amountz">
+      <div class="add-title">Add Entity</div>
+      <%= f.number_field :amount, placeholder: "Amount", class: "add-amount-input", id: "amount", placeholder: "$0.00", min: 0, step: 0.01 %>
+      <div class="add-option category-title">
+        <ion-icon name="clipboard-outline" class="ion-icon"></ion-icon>
+        <%= f.text_field :name, placeholder: "Name", class: "option-text", maxlength: 20 %>
+      </div>
+      <div class="add-option category-title">
+        <ion-icon name="calendar-outline" class="ion-icon"></ion-icon>
+        <%= f.date_field :date, class: "option-text" %>
+      </div>
+    </div>
+    <div class="add-btn"><%= button_to "Save", group_entities_path, method: :post, class: "add-save" %></div>
+  <% end %>
+</section>

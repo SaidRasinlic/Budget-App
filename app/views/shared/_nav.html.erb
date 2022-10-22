@@ -1,0 +1,16 @@
+<nav class="container-fluid d-flex flex-column" id="nav">
+  <div class="user-info d-flex justify-content-between align-items-center mx-2">
+    <div class="user-text d-flex">
+      <%= image_tag avatar_url(current_user), class: "avatar" %>
+      <div>
+        <p class="user-text-greetings mb-0">Greetings!</p>
+        <p class="user-text-name mb-0"><%= current_user.name %></p>
+      </div>
+    </div>
+    <div>
+      <%= link_to edit_user_registration_path do %>
+        <ion-icon name="settings" class="settings-button"></ion-icon>
+      <% end %>
+    </div>
+  </div>
+</nav>

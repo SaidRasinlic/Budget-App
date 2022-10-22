@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  bottom: -99px;
+  transform: translate(-50%, -50%);
+}
+
+.arrow span {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-bottom: 5px solid #06a8ff;
+  border-right: 5px solid #06a8ff;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+/* If display screen crosses over 500px */
+@media (min-width: 500px) {
+  .arrow {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    bottom: 85px;
+    transform: translate(-50%, -50%);
+  }
+
+  .arrow span {
+    margin: -7px;
+  }
+}
