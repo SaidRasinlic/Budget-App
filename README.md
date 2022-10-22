@@ -4,7 +4,7 @@ The Blog app will be a classic example of a blog website. I will create a fully 
 
 
 ## Screenshot
-<img align="center" src="./app/assets/images/Budget-App.png" alt="Desktop Snapshot" />
+<p align="center"><img src="./app/assets/images/Budget-App.png" alt="Desktop Snapshot" /></>
 
 
 ## Built With
