@@ -1,0 +1,579 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+@import 'groups/index';
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Luckiest+Guy&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 70%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.user-expenses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  position: relative;
+  background-color: #f7f8fd;
+}
+
+.user__amount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+  height: 80%;
+}
+
+.user__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0a160d;
+  padding-bottom: 2rem;
+}
+
+.user__option {
+  padding: 0 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 90%;
+}
+
+.category-title {
+  display: flex;
+  flex-direction: row;
+}
+
+/* stylelint-disable */
+
+.category-title > ion-icon {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 0.5rem;
+  margin: 1.5rem 0;
+  margin-right: 1rem;
+  background: linear-gradient(1deg, #020024 2%, #093179 31%, #00d4ff 100%);
+  border-radius: 30%;
+}
+
+/* stylelint-enable */
+
+.icon-inner,
+.ionicon,
+svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.option-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  padding: 1.5rem;
+  outline: none;
+  background: #fff;
+  color: #202020;
+}
+
+.user__save {
+  background: linear-gradient(1deg, #020024 2%, #093179 31%, #00d4ff 100%);
+  border: none;
+  color: #f7f8fd;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 8rem;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+  width: 100%;
+}
+
+input[type=submit] {
+  display: flex;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* shared/nav */
+
+.user-text-greetings {
+  font-style: italic;
+  color: #5e5e61;
+}
+
+.user-text-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.settings-button {
+  font-size: 2rem;
+  color: #9598a7;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 20%;
+  height: 26px;
+  width: 26px;
+}
+
+.avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: #f7f8fd;
+  border: 0.2rem solid black;
+  margin-right: 1rem;
+}
+
+/* MODAL */
+
+.modal-body {
+  padding: 2rem 1rem;
+  font-size: 1.5rem;
+}
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+  display: none;
+}
+
+.custom-file-input::before {
+  display: none;
+}
+
+.custom-file-input:hover::before {
+  border-color: black;
+  display: none;
+}
+
+.add-option {
+  padding: 0 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.add-description {
+  height: 16%;
+}
+
+.add-description > .option-text {
+  width: 100%;
+}
+
+// style groups/new
+
+.add-expenses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 95vh;
+  padding: 2rem;
+  position: relative;
+  background: linear-gradient(1deg, #020024 2%, #d2dbeb 31%, #00d4ff 100%);
+}
+
+.add-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+  height: 100%;
+}
+
+/* stylelint-disable */
+.add-option > ion-icon {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 0.5rem;
+  margin: 1.5rem 0;
+  margin-right: 1rem;
+  background-color: #64e085;
+  border-radius: 30%;
+}
+
+/* stylelint-enable */
+
+.save-btn {
+  position: absolute;
+  bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-save-btn {
+  background: linear-gradient(1deg, #020024 2%, #093179 31%, #00d4ff 100%);
+  border: none;
+  color: #f7f8fd;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 8rem;
+  cursor: pointer;
+}
+
+.category {
+  height: 60%;
+}
+
+.option-category {
+  color: #777;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  padding: 1.5rem;
+  outline: none;
+}
+
+/* stylelint-disable */
+.category-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.category-title > ion-icon {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 0.5rem;
+  margin: 1.5rem 0;
+  margin-right: 1rem;
+  background-color: #64e085;
+  border-radius: 30%;
+}
+
+/* stylelint-enable */
+
+.icons {
+  display: grid;
+  padding-bottom: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  height: 85%;
+}
+
+// icons style
+
+.transaction-img {
+  padding: 5px;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #dfec51 0%, #a3df33 100%);
+  margin-right: 1rem;
+  color: #fff;
+}
+
+.fast-food {
+  background: linear-gradient(135deg, #dfec51 0%, #a3df33 100%);
+}
+
+.bag {
+  background: linear-gradient(135deg, #889aeb 0%, #3d639b 100%);
+}
+
+.ticket {
+  background: linear-gradient(135deg, #f2d50f 0%, #da0641 100%);
+}
+
+.airplane {
+  background: linear-gradient(135deg, #75798b 0%, #3d639b 100%);
+}
+
+.barbell {
+  background: linear-gradient(135deg, #e2ddba 0%, #aa6a7c 100%);
+}
+
+.trash {
+  background: linear-gradient(135deg, #f2d50f 0%, #da0641 100%);
+}
+
+.car {
+  background: linear-gradient(135deg, #fad961 0%, #f76b1c 100%);
+}
+
+.call {
+  background: linear-gradient(135deg, #ff57b9 0%, #a704fd 100%);
+}
+
+.bus {
+  background: linear-gradient(135deg, #fad961 0%, #f76b1c 100%);
+}
+
+.game-controller {
+  background: linear-gradient(135deg, #0ff0b3 0%, #036ed9 100%);
+}
+
+.house {
+  background: linear-gradient(135deg, #e3e3e3 0%, #5d6874 100%);
+}
+
+.shirt {
+  background: linear-gradient(135deg, #fcdf8a 0%, #f38381 100%);
+}
+
+.bandage {
+  background: linear-gradient(135deg, #f5515f 0%, #a1051d 100%);
+}
+
+.add-title {
+  display: flex;
+  font-size: 25px;
+  font-family: 'Monteserrat', sans-serif;
+  margin-top: -95px;
+}
+
+@media (max-width: 320px) {
+  .icons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .add-amount {
+    height: 100%;
+    margin-top: -40px;
+  }
+
+  .add-title {
+    margin: unset;
+  }
+
+  .save-btn {
+    margin: -25px;
+  }
+
+  .category,
+  .icons {
+    height: auto;
+  }
+
+  .add-amountz {
+    margin-top: -40px;
+  }
+
+  .entities-item .entities-p {
+    width: 65px;
+  }
+
+  .delete-entity-item {
+    padding: 10px !important;
+    font-size: 14px !important;
+  }
+}
+
+.add-amountz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+  height: 90%;
+}
+
+.add-amount-input {
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  padding: 1.5rem;
+  outline: none;
+  background: #fff;
+  color: #202020;
+  width: 50%;
+}
+//transactions
+
+.transactions-list {
+  list-style-type: none;
+  padding: 0;
+  height: 30%;
+}
+
+.transactions-list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.transactions-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  height: 100%;
+  border-radius: 40px;
+  background: linear-gradient(181deg, #131414 0%, #ec14f8 100%);
+  margin: 10px 0;
+  padding: 0 30px;
+}
+
+.transactions-item p {
+  margin: 0;
+}
+
+.transactions-details,
+.transactions-amount,
+.transactions-date,
+.transactions-item {
+  font-size: 18px !important;
+  min-width: 50px;
+}
+
+.transactions-item .transaction-img {
+  margin: 0;
+}
+
+.transactions-details {
+  display: flex;
+  position: relative;
+}
+
+.transactions-date {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  color: gainsboro;
+}
+
+.transactions-amount {
+  align-items: flex-start;
+}
+
+#entities-frame {
+  background: #e0f6ff;
+  height: 95vh;
+}
+
+.delete-group {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.spn {
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-weight: bold;
+}
+
+.del-date {
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-size: 15px;
+  margin: 0;
+  border-bottom: 1px solid orangered;
+}
+
+.precision,
+.dollar {
+  color: #0bdc3c !important;
+}
+
+.delete-group-btn {
+  background: linear-gradient(1deg, #020024 2%, #093179 31%, #00d4ff 100%);
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-family: 'Monteserrat', sans-serif;
+  margin: 25px 0;
+}
+
+.entities-list {
+  list-style-type: none;
+  padding: 10px;
+  font-size: 15px;
+  font-family: 'Monteserrat', sans-serif;
+}
+
+.entities-item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  gap: 12px;
+  overflow-wrap: break-word;
+}
+
+.delete-entity-item {
+  padding: 10px 15px;
+  background: linear-gradient(1deg, #231f35d6 2%, #3500ff 31%, #3e4a52 100%);
+  color: #fff;
+  font-size: 14px;
+}
+
+.entities-item .entities-p {
+  margin: 0;
+}
+
+.entities-name {
+  display: flex;
+  align-items: center;
+}
+
+.add-save {
+  background: linear-gradient(1deg, #020024 2%, #093179 31%, #00d4ff 100%);
+  border: none;
+  color: #f7f8fd;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 8rem;
+  cursor: pointer;
+}

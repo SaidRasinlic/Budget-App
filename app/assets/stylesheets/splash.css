@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+:root {
+  --background: #f7f8fd;
+  --primary-color: #3778c2;
+  --secondary-color: #5fb523;
+  --tertiary-color: #434b54;
+}
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1em;
+  margin: -40px 1em 1em;
+  padding: 1em;
+  z-index: -2;
+  position: absolute;
+  height: 80vh;
+}
+
+.splash-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #06a8ff;
+  font-size: 2.5rem;
+  padding: 5rem 2rem 2rem;
+}
+
+/* stylelint-disable */
+
+.splash-image {
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  border: 1px solid lightblue;
+  box-shadow: #06a8ff;
+  padding: 0;
+}
+
+/* stylelint-enable */
+
+.splash-illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.splash-text {
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+}
+
+.splash-text-title {
+  text-align: center;
+  margin: 1em;
+}
+
+.splash-text-description {
+  text-align: center;
+  font-size: 19px;
+  color: var(--tertiary-color);
+}
+
+.get-started {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: -50px;
+  left: 50%;
+  width: 100px;
+  bottom: -190px;
+}
+
+.get-started-button {
+  padding: 15px;
+  width: 200px;
+  border-radius: 2rem;
+  background: linear-gradient(1deg, #020024 2%, #093179 31%, #00d4ff 100%);
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+  color: #fff;
+  font-size: 17px;
+}
+
+.get-started-button:hover {
+  background-image: none;
+}
+
+@media (max-width: 700px) {
+  .splash2 {
+    display: none;
+  }
+}
+
+@media (min-width: 500px) {
+  body {
+    overflow: hidden;
+  }
+
+  .splash {
+    display: none;
+  }
+
+  .splash2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .splash-title2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    padding: 1rem 3rem;
+    color: #06a8ff;
+  }
+
+  .get-started2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 88px;
+  }
+
+  .splash-image2 {
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #06a8ff;
+    padding: 0;
+  }
+
+  .splash-illustration2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 335px;
+  }
+
+  .splash-text2 {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .splash-text-title2 {
+    text-align: center;
+    margin: 1em;
+  }
+
+  .get-started-button {
+    margin-top: 40px;
+    cursor: pointer;
+  }
+}

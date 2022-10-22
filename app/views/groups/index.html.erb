@@ -1,0 +1,39 @@
+<%= render 'shared/nav' %>
+<section class="container-fluid d-flex flex-column px-0" id="frame-wrapper">
+  <div class="container-fluid d-flex flex-column" id="budget-frame">
+    <div class="total-wrapper">
+      <p>Total Expenses:</p>
+      <p class="total-amount">$<%= number_with_precision(current_user.entities.sum(:amount), precision: 2) %></p>
+    </div>
+    <div class="budget-panel-wrapper">
+      <p><%= Date.today.strftime("%A") %></p>
+      <p class="todays-total">Today's total:</p>
+      <p class="dollar">$<%= number_with_precision(daily_total_expenses, precision: 2) %></p>
+      <div id="budget-panel">
+        <ul class="transactions-list">
+          <% @groups.each do |group|%>
+            <%= link_to group_entities_path(group) do %>
+              <li class="transactions-item">
+                <ion-icon name="<%= group.icon %>" class="transaction-img <%= group.icon %>"></ion-icon>
+                <p class="transactions-name"><%= group.name %></p>
+                <div class="transactions-details">
+                  <p class="transactions-amount dollar">$<%= number_with_precision(group.entities.sum(:amount), precision: 2) %>
+                    <p class="transactions-date"><%= group.created_at.strftime("%a") %></p>
+                  </p>
+                </div>
+              </li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="options">
+    <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "btn btn-danger"%>
+    <%= link_to new_group_path class:"addbutton" do %>
+      <ion-icon name="add-outline" class="add-button"></ion-icon>
+    <% end %>
+    <ion-icon name="alert-circle" class="show-button" data-toggle="modal" data-target="#exampleModal"></ion-icon>
+  </div>
+</section>
+<%# <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'btn btn-danger'%>
