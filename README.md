@@ -37,12 +37,10 @@ To get a local copy up and running follow these simple example steps.
 - Navigate to the correct directory **cd Budget-app** (case sensitive)
 - Run **bundle install** in your terminal (in case you need to update the gems run **bundle update**)
 - Please run **npm init -y** and **npm install** if you want to test the css linters
-- To setup database and tailwind run the following commands:
-  - `Inside of config folder create local_env.yml file and add key-value pairs for db access (e.g. BUDGET_APP_DATABASE_USERNAME: yourusername and BUDGET_APP_PASSWORD: yourpassword`
-  - `Go to my config/application.rb file and copy the code (before_configuration block) and paste it to your file.`
-  - In your terminal run the following two commands:
-    - `rails db:create`
-    - `rails db:migrate`
+- Setup database configuration in config/database.yml and use your correct username and password to access PostgreSQL db
+- In your terminal run the following two commands:
+  - `rails db:create`
+  - `rails db:migrate`
 - Run **rails s** in your terminal to start the server.
 - Enter **http://localhost:3000/ or localhost:3000** on your browser to view page
 - **Congratulations! App should run successfully.**
