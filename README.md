@@ -33,7 +33,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation, Setup and Usage
 
- **Clone this [repo](https://github.com/udeaghad/recipe-app)**
+ **Clone this [repo](https://github.com/SaidRasinlic/Budget-App)**
 - Navigate to the correct directory **cd Budget-app** (case sensitive)
 - Run **bundle install** in your terminal (in case you need to update the gems run **bundle update**)
 - Please run **npm init -y** and **npm install** if you want to test the css linters
