@@ -4,7 +4,7 @@ This Ruby on Rails capstone project is about building a mobile web application w
 
 
 ## Screenshot
-<p align="center"><img src="./app/assets/images/Budget-App.png" alt="Desktop Snapshot" /></>
+<p align="center"><img src="./app/assets/images/Budget-App-Screenshot.png" alt="Desktop Snapshot" /></>
 
 
 ## Built With
